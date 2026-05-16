@@ -1,0 +1,7 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Data files (avoid committing large SAR imagery)
+data/
