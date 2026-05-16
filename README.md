@@ -1,4 +1,4 @@
-# SAR Vessel Detection — CA-CFAR Pipeline
+# SAR Vessel Detection - CA-CFAR Pipeline
 
 A lightweight, single-file pipeline for detecting vessels in SAR (Synthetic Aperture Radar) imagery using the **Cell-Averaging CFAR** algorithm, with geofence filtering and GeoJSON export.
 
@@ -84,4 +84,4 @@ If you don't have access to commercial SAR data, these free sources work with th
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) for details.
+MIT License - see [LICENSE](LICENSE) for details.
