@@ -27,7 +27,7 @@ def cfar(image, guard_len, train_len, pfa):
         pfa (float): Probability of False Alarm. Lower = fewer false positives, may miss real targets.
 
     Returns:
-        np.ndarray: Boolean mask — True where a pixel exceeds the adaptive threshold.
+        np.ndarray: Boolean mask - True where a pixel exceeds the adaptive threshold.
     """
 
     # 1. Tool Size
@@ -97,7 +97,7 @@ def process_sar_and_geofence(sar_path, geofence_path, output_path, pfa=1e-5, min
             print(f"   SAR CRS detected: {sar_crs}")
 
     # Ensure Geofence CRS matches SAR Image CRS before spatial intersection.
-    # (Moved outside the rasterio context — transform and crs are already captured above.)
+    # (Moved outside the rasterio context - transform and crs are already captured above.)
     if geofence_gdf.crs != sar_crs:
         print(f"   Reprojecting geofence from {geofence_gdf.crs} to {sar_crs}...")
         geofence_gdf = geofence_gdf.to_crs(sar_crs)
@@ -127,7 +127,7 @@ def process_sar_and_geofence(sar_path, geofence_path, output_path, pfa=1e-5, min
         return
 
     # Size filter: discard blobs smaller than min_blob_pixels.
-    # A single anomalous pixel will pass CFAR — this step removes those noise hits
+    # A single anomalous pixel will pass CFAR - this step removes those noise hits
     # before they become false vessel alerts.
     valid_labels = [
         i for i in range(1, num_features + 1)
